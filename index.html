@@ -7,6 +7,150 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    
+    <!-- Background section -->
+    <section class="background-image-container">
+      <figure>
+        <img
+          src="assets/klara-kulikova-unsplash.jpg"
+          alt="Seascape at sunset"
+          class="bg-img"
+        />
+
+        <figcaption class="bg-img-credit">
+          Photo by
+          <a
+            href="https://unsplash.com/fr/@kkalerry?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Klara Kulikova</a
+          >
+          on
+          <a
+            href="https://unsplash.com/fr/photos/deux-personnes-qui-font-du-paddle-au-coucher-du-soleil-I-t-BBFyUWY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Unsplash</a
+          >
+        </figcaption>
+      </figure>
+      <div class="odin-logo-container">
+        <img
+          src="assets/odin-lined.png"
+          alt="The Odin Project Logo"
+          class="odin-logo"
+        />
+        <h1>ODIN</h1>
+      </div>
+    </section>
+
+    <!-- Form section -->
+
+    <section class="account-creation-container">
+      <p class="demo-text">
+        This is a demo registration page ! Feel free to test the different input
+        to see how they behave
+      </p>
+      <div class="form-container">
+        <h2>Let's do this!</h2>
+        <p class="all-fields-required-text">All fields are required</p>
+
+        <form action="">
+          <div class="input-container">
+            <div class="label-input">
+              <label for="first-name">FIRST NAME</label>
+              <input
+                required
+                type="text"
+                id="first-name"
+                name="user-first-name"
+                placeholder="John"
+                minlength="2"
+                maxlength="40"
+                autocomplete="given-name"
+              />
+            </div>
+
+            <div class="label-input">
+              <label for="last-name">LAST NAME</label>
+              <input
+                required
+                type="text"
+                id="last-name"
+                name="user-last-name"
+                placeholder="Doe"
+                minlength="2"
+                maxlength="40"
+                autocomplete="family-name"
+              />
+            </div>
+
+            <div class="label-input">
+              <label for="email">EMAIL</label>
+              <input
+                required
+                type="email"
+                id="email"
+                name="user-email"
+                placeholder="someone@example.com"
+                autocomplete="email"
+              />
+            </div>
+
+            <div class="label-input">
+              <label for="tel">PHONE NUMBER</label>
+              <input
+                required
+                type="tel"
+                id="tel"
+                name="user-tel"
+                placeholder="06 55 55 55 55"
+                inputmode="numeric"
+                autocomplete="tel"
+                pattern="^(?:0|\+33)\s?[1-9](?:[\s.\-]?\d{2}){4}$"
+              />
+            </div>
+
+            <div class="label-input">
+              <label for="password">PASSWORD</label>
+              <input
+                required
+                type="password"
+                id="password"
+                name="user-password"
+                placeholder="8 characters minimum"
+                minlength="8"
+                maxlength="64"
+                autocomplete="new-password"
+              />
+            </div>
+
+            <div class="label-input">
+              <label for="confirm-password">CONFIRM PASSWORD</label>
+              <input
+                required
+                type="password"
+                id="confirm-password"
+                name="user-confirm-password"
+                placeholder=""
+                minlength="8"
+                maxlength="64"
+                autocomplete="new-password"
+              />
+            </div>
+          </div>
+          <div class="cta-container">
+            <button class="cta-btn" id="ctaBtn">Create Account</button>
+            <p id="passwordError">Passwords do not match</p>
+            <p>Already have an account? <a href="#">Log in</a></p>
+          </div>
+        </form>
+      </div>
+      <footer>
+        <p>NBX 2025 ©</p>
+        <a href="https://github.com/SuperThinou" target="_blank"
+          ><img
+            src="assets/github-mark-grey.svg"
+            alt="Github logo"
+            class="github-logo"
+        /></a>
+      </footer>
+    </section>
   </body>
+  <script src="script.js"></script>
 </html>

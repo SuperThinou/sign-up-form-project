@@ -1,0 +1,264 @@
+/* CSS RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+/* END CSS RESET */
+
+@font-face {
+  font-family: Norse-Bold;
+  src: url(assets/Norse-Bold.otf) format("opentype");
+}
+
+/* Backgronud container style */
+.background-image-container {
+  position: relative;
+  color: white;
+}
+
+.bg-img {
+  width: 100vh;
+  height: 30vh;
+  object-fit: cover;
+}
+
+.odin-logo-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  padding: 15px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.odin-logo {
+  height: 75px;
+  margin-right: 30px;
+}
+
+h1 {
+  font-family: Norse-Bold, serif;
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.bg-img-credit {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  display: inline-flex;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.bg-img-credit a {
+  color: white;
+}
+/* End background container */
+
+/* Form style */
+
+body {
+  background-color: #f9fafb;
+}
+
+.account-creation-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.demo-text {
+  text-align: center;
+  margin: 3vh 5vh;
+  font-size: 1.5rem;
+}
+
+h2 {
+  padding-top: 3vh;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.all-fields-required-text {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+h2,
+.all-fields-required-text,
+.input-container {
+  background-color: white;
+}
+
+.input-container {
+  box-shadow: 0px 10px 15px -10px rgba(0, 0, 0, 0.2);
+  padding: 0 5%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.label-input {
+  font-size: 1.2rem;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin-bottom: 20px;
+  padding: 5px;
+  min-width: 25vh;
+  max-width: 40vh;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+input:focus {
+  border: 1px solid rgb(0, 115, 255);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+  outline: none;
+}
+
+input:not(:placeholder-shown):invalid {
+  border: 1px solid red;
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+input:not(:placeholder-shown):valid {
+  border: 1px solid green;
+  background-color: rgba(0, 128, 0, 0.1);
+}
+
+.cta-container {
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cta-btn {
+  cursor: pointer;
+  background-color: #b95722;
+  box-shadow: 0px 10px 15px 0px #b957224b;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 50px;
+  margin: 20px;
+  transition: 0.3s;
+}
+.cta-btn:hover {
+  transform: scale(1.02);
+}
+
+#passwordError {
+  color: red;
+  margin-bottom: 10px;
+  display: none;
+}
+#passwordError::before {
+  content: "❌";
+}
+
+footer {
+  cursor: default;
+  height: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+.github-logo {
+  transition: 0.1s ease-in-out;
+  height: 30px;
+  margin-left: 20px;
+}
+.github-logo:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (min-width: 850px) {
+  body {
+    height: 100vh;
+    display: flex;
+  }
+
+  .bg-img {
+    height: 100vh;
+  }
+}
